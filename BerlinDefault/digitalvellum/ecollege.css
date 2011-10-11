@@ -6,9 +6,10 @@ ul#mybar {
 
 
 /* Base Styles */
-
+/* 10-10-2011 REMOVED 1.4EM Line-Height from the body
+    May subtly change vertical spacing around elements */
 body {
-    font: 100%/1.4em "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font: 100% "Helvetica Neue", Helvetica, Arial, sans-serif;
     background: #EFEBDE;
     min-width: 1024px;
     margin-top: 50px !important;
