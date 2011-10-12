@@ -6,8 +6,7 @@ ul#mybar {
 
 
 /* Base Styles */
-/* 10-10-2011 REMOVED 1.4EM Line-Height from the body
-    May subtly change vertical spacing around elements */
+
 body {
     font: 100% "Helvetica Neue", Helvetica, Arial, sans-serif;
     background: #EFEBDE;
@@ -166,21 +165,23 @@ div#header div#courseSettingsMenu .dijitArrowButtonInner {
 }
 
 .ecollege .dijitPopup, .ecollege .dijitMenuPopup {
-     border: 1px solid #BACCE0;
-     box-shadow: 1px 1px 3px #000000;
+     box-shadow: 2px 2px 2px #000000;
 }
 
 .ecollege .dijitMenuPopup {
-     margin-left: 8px;
+     margin-left: 0px;
+     border: border 1px #DEDEDE;
 }
 
 .ecollege .dijitMenuPopup .dijitMenuTable td {
-     border-bottom: 1px solid #CCCCCC;
+     border-bottom: 0px;
      font-size: 75%;
-     padding: 3px 0pt;
+     padding: 5px 2px;
 }
 
-
+.ecollege .dijitMenuPopup #pageTypeSelect_menu {
+     border: none;
+}
 
 
 
@@ -445,18 +446,20 @@ div.content-container-full-screen {
     border-top-right-radius: 5px;
     background-color: #fff;
     text-align: right;
-    height: 20px;
-    border: 1px solid #aaa;
-    padding: 4px 8px 0 8px;;
+    height: 100%;
+    border: 0;
+    padding: 0;
 }
 
-.ecollege #optionsMenu .dijitInline, 
-.ecollege #optionsMenu #optionsDropDown_label .dijitInline, 
-.ecollege #optionsMenu #optionsDropDown_label .dijitButtonText {
+.ecollege #optionsMenu .dijitDropDownButton {
      margin: 0;
-     padding-top: 0;
+     padding: 6px 8px 0 8px !important;
 }
-
+.ecollege #optionsMenu .dijitInline, 
+.ecollege #optionsMenu #optionsDropDown_label .dijitInline
+.ecollege #optionsMenu #optionsDropDown_label .dijitButtonText {
+	padding: 0;
+}
 .ecollege #optionsMenu .dijitDropDownButton .dijitButtonNode {
      background: none repeat scroll 0% 0% transparent;
      border: medium none;
@@ -497,6 +500,7 @@ div.content-container-full-screen {
     -webkit-border-radius: 5px 5px 5px 5px;
     -moz-border-radius: 5px 5px 5px 5px;
     border-radius: 5px 5px 5px 5px; 
+    padding: 2px;
 }
 
 .ecollege .dijitDialogTitleBar {
@@ -635,7 +639,7 @@ div.content-container-full-screen {
 }
 
 .ecollege #gbAuthorToolsTabContainer .dijitPlaceHolder {
-    top: -3px;
+ 
     left: 3px;
 }
 
@@ -673,10 +677,16 @@ div.content-container-full-screen {
     background: -moz-linear-gradient(top, #c2d4e6, #ffffff);
     /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c2d4e6', endColorstr='#ffffff');*/
 }
+#gbAuthorToolsTabContainer .formline .addPageCheckBoxLabel {
+	margin-top: 5px;
+}
+
+
 
 #widget_pointsPossible,
 #widget_pageNameTextBox {
     margin-top: 3px;
+    padding: 3px;
 }
 
 .addPageDropDown {
@@ -685,11 +695,11 @@ div.content-container-full-screen {
 
 #pageTypeSelect td.dijitButtonContents {
     width: 383px;
-    padding: 10px 5px;
+    padding: 3px;
 }
 
 #pageTypeSelect td.dijitArrowButton {
-    padding: 10px 5px;
+    padding: 2px;
 }
 
 
@@ -710,7 +720,7 @@ div.content-container-full-screen {
 }
 
 .ecollege div.popup .inner {
-    border-width: 4px;
+    border-width: 1px;
     border-style: solid;
     border-color: #ddd;
     -webkit-border-radius: 5px 5px 5px 5px;
@@ -849,6 +859,67 @@ div.inner input[value="Cancel"] {
      display: block;
      margin: -16px 0 10px;
      padding: 2px 0;
+}
+
+/* POPUP SUCCESS AND ERROR MESSAGE IN COURSE - LIGHTBOX */
+
+div.popup > div.inner.error {
+    border-color: #ddd;
+    background-color: #ff0000;
+}
+
+div.popup > div.inner.info {
+    border-color: #ddd;
+    background-color: #fffbbe;
+}
+
+div.popup > div.inner.success {
+    border-color: #ddd;
+    background-color: #fffbbe;
+
+}
+div.popup > div.inner.success,
+div.popup > div.inner.error,
+div.popup > div.inner.info {
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	text-align: center;
+	position: fixed;
+	width: 320px;
+	-moz-box-shadow: 3px 3px 4px #000;
+	-webkit-box-shadow: 3px 3px 4px #000;
+	box-shadow: 3px 3px 4px #000;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+	left: 50%;
+	margin-left: -160px;
+	z-index: 2000;
+	top: 0;
+	
+}
+
+
+div.popup > div.inner.success > h3,
+div.popup > div.inner.error > h3,
+div.popup > div.inner.info > h3 {
+    display: none;
+}
+div.popup > div.inner.success > p,
+div.popup > div.inner.error > p,
+div.popup > div.inner.info > p {
+    font-size: 12px;
+    padding: 0px;
+    margin: 0px;
+    color: #000;
+    font-weight: bold;
+}
+div.popup > div.inner.error > p {
+	color: #FFF;
+}
+
+/* Fixes double scrollbar on Arrange tab */
+.ecollege .dijitTabPaneWrapper .dijitContentPane {
+overflow: hidden;
 }
 
 
@@ -1324,3 +1395,5 @@ div.module li.level0 li li li .label {
      border: medium none;
      padding: 10px;
 }*/
+
+/* My Comment */

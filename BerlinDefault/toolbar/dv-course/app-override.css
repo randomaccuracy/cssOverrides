@@ -39,15 +39,23 @@
 /* Border color for pop up dialog boxes */
 .ecollege .dijitDialog,
 .ecollege div.popup .inner {
-    border-color: #F26522;
+    border-color: #DEDEDE;
 }
 
 /* Header bar and text color for pop up dialog boxes. */
 .ecollege .dijitDialogTitleBar,
 .ecollege div.popup .inner h3 {
-    background-color: #e84e0f;
-    color: #fff; /* text color */
+    background-color: #dedede;
+    color: #000; /* text color */
+    padding: 5px;
 }
+.ecollege .dijitDialogTitleBar
+{
+    background-color: #dedede;
+    color: #000; /* text color */
+    padding: 0px;
+}
+
 
 /* Color for type in tabs of modify window */
 .ecollege .dijitTabChecked .dijitTabInnerDiv .dijitTabContent, 
@@ -735,9 +743,7 @@ body.gradebook .select-assignment-section {
     padding-left: 5px !important;
 }
 
-.ecollege .dijitDialogTitleBar, .ecollege div.popup .inner h3 {
-    padding: 0 !important;
-}
+
 
 .ecollege .dijitDialog .dijitDialogTitle {
     display: none;
@@ -777,6 +783,12 @@ body.gradebook .select-assignment-section {
     padding: 15px 5px 0 5px !important;
 }
 
+.ecollege #gbAuthorToolsTabContainer .dijitTabCheckedHover .dijitTabContent,
+.ecollege #gbAuthorToolsTabContainer .dijitTabChecked .dijitTabContent,
+.ecollege #gbAuthorToolsTabContainer .dijitTabHover .dijitTabContent,
+.ecollege #gbAuthorToolsTabContainer .dijitTabContent {
+    padding: 12px 5px 5px 3px !important;
+}
 .ecollege .dijitTab .tabLabel {
     min-height: inherit !important;
     padding; 0 !important;

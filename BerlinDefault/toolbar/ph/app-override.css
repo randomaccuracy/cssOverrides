@@ -75,3 +75,8 @@
 .feedFilteringContainer {
 background: none repeat scroll 0 0 #E1DDCD;
 }
+/* Activity Feed Clear Floats Height Change */
+
+.basecollege .activityFeedWidgetWrapper .clearAllFloats {
+	height: 0px;
+}
